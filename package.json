@@ -1,0 +1,8 @@
+{
+  "name": "BookLibrary",
+  "version": "1.0.0",
+  "description": "Project React",
+  "main": "index.js",
+  "author": "@VirginiaCreativa",
+  "license": "MIT"
+}
