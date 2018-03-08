@@ -28,6 +28,8 @@ header {
 				grid-template-columns: 1fr 1fr 1fr 1fr;
 				position: relative;
 				z-index: -1;
+				width: 175px;
+				margin: auto;
 				.line {
 					position: relative;
 					top: -4px;
