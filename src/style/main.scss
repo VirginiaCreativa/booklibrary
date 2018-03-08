@@ -1,3 +1,4 @@
+/*==================== HEADER ====================*/
 header {
 	height: 200px;
 	.logo {
@@ -49,8 +50,33 @@ header {
 		
 	}
 }
+/*==================== SEARCH ====================*/
 #search {
+	height: 50px;
+	.container {
+	position: relative;
+
+	}
 	input[type="search"]{
-		
+		width: 100%;
+		position: relative;
+		height: 50px;
+		background: #122343;
+		border: none;
+		font-size: 10pt;
+		color: #ddd;
+		border-radius: 5px;
+		padding: 10px 20px;
+	}
+	.btnSearch {
+		right: 26px;	
+		position: absolute;
+		cursor: pointer;
+		z-index: 1;
+		background-color: transparent;
+		border: none;
+		color: #ddd;
+		font-size: 34px;
+		top: 2px;
 	}
 }
