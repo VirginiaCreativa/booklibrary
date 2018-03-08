@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const webpack = require('webpack')
 
@@ -34,7 +33,7 @@ module.exports = {
 				use: {
 					loader: 'url-loader',
 					options: {
-						limit: 8192,
+						limit: 10000,
 						outputPath: 'images/',
                         name: '[name].[ext]?[hash]'
 					}
@@ -69,35 +68,10 @@ module.exports = {
 			        	}
 		        	]
 		        })
-			},
-			{
-		        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-		        use: [
-		          {
-		            loader: 'url-loader',
-		            options: {
-		              limit: 10000,
-		              mimetype: 'application/font-woff',
-		              outputPath: 'fonts/',
-                       name: '[name].[ext]?[hash]'
-		            }
-		          }
-		        ]
-		    },
-			{
-				test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-			            outputPath: 'fonts/',
-	                    name: '[name].[ext]?[hash]'
-		            }
-				}
-			},
+			}
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
 		new ExtractTextPlugin('main.css'),
 		new BrowserSyncPlugin({
 	      host: 'localhost',
