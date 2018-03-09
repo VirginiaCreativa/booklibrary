@@ -2,3 +2,8 @@ body {
 	background-color: #273c75 !important;
 	font-family: 'Source Sans Pro', sans-serif !important;
 }
+a {
+    &:hover {
+        text-decoration: none !important;
+    }
+}
