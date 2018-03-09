@@ -59,9 +59,9 @@ header {
 #search {
 	height: 50px;
 	margin-bottom: 40px;
-	.container {
 	position: relative;
-
+	.container {
+		position: relative;
 	}
 	input[type="search"]{
 		width: 100%;
@@ -75,7 +75,7 @@ header {
 		padding: 10px 20px;
 	}
 	.btnSearch {
-		right: 26px;	
+		right: 20px;	
 		position: absolute;
 		cursor: pointer;
 		z-index: 1;
@@ -83,7 +83,7 @@ header {
 		border: none;
 		color: #ddd;
 		font-size: 34px;
-		top: 2px;
+		top: -4px;
 		&:hover {
 			color: var(--yellow);
 		}
