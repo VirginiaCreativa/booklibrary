@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
-import Books from "./components/books.js"
+import Books from "./components/books"
 
-const pruebaReact = document.querySelector('.pruebaReact');
+const contentBooks = document.querySelector('#contentBooks');
 
 render(
-	<Books/>, pruebaReact
+	<Books/>, contentBooks
 );

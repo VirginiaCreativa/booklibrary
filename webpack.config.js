@@ -15,8 +15,12 @@ module.exports = {
   		compress: true,
 		port: 3000
 	},
+	resolve: {
+        alias: {
+            jquery: "jquery/src/jquery"
+        }
+    },
 	module: {
-
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
@@ -68,7 +72,11 @@ module.exports = {
 			        	}
 		        	]
 		        })
-			}
+			},
+			{
+	            test: /[\/\\]node_modules[\/\\]some-module[\/\\]index\.js$/,
+	            loader: "imports-loader?this=>window"
+        	}
 		]
 	},
 	plugins: [
@@ -97,8 +105,10 @@ module.exports = {
 			}
 		}),
 		new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
+			'window.jQuery': 'jquery',
+			'window.$': 'jquery',
+			'jQuery': 'jquery',
+			'$': 'jquery'
         })
 	]
 }
