@@ -1,5 +1,14 @@
-body, html {
-	height: 100%;
+html { 
+	height:100%; 
+}
+body{ 
+	min-height:100%; 
+	padding:0; 
+	margin:0; 
+	position:relative;
+	&:after {
+		content:''; display:block; height:280px;
+	}
 }
 /*==================== HEADER ====================*/
 header {
@@ -55,8 +64,14 @@ header {
 		
 	}
 }
+/*==================== CONTENT MAIN ====================*/
+#contentMain {
+	min-height:100%;
+	height: 480px;
+	position: relative;
+}
 /*==================== SEARCH ====================*/
-.search {
+#search {
 	height: 50px;
 	margin-bottom: 40px;
 	position: relative;
@@ -175,10 +190,15 @@ footer {
    bottom:0;
    width:100%;
    height:60px;
-   .container {
-   		padding: 20px 0;
+   .line {
    		border-top: 1px solid rgba(250, 250, 250, 0.1);
-   		color: #ddd;
+   		display: block;
+   		height: 2px;
+   		width: 100%;
+   		position: relative;
+   		left: 0%;
+   		right: 0%;
+   		margin-bottom: 16px;
 	}
 	a {
 		color: #ddd;
@@ -192,8 +212,19 @@ footer {
 	span {
 		margin: 0 6px;
 	}
+	.col-md-8 {
+		text-align: left;
+	}
 	.col-md-4 {
 		text-align: right;
+	}
+	[class*="col-"] {
+   		color: #ddd;
+	}
+	@media (max-width: 576px) {
+		.col-sm {
+			text-align: center;
+		}
 	}
 
 }

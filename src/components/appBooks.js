@@ -30,7 +30,7 @@ class AppBooks extends Component {
 	render() {
 		return (
 			<div>
-				<div className='search'>
+				<div id='search'>
 					<Form>
 						<Input type="search" placeholder="Search" 
 							onChange={event => this.setState({query: event.target.value})}
@@ -44,7 +44,6 @@ class AppBooks extends Component {
 						<Button onClick={(ev) => this.search()} className="btnSearch"><i className="ion-ios-search"></i></Button>
 					</Form>
 				</div>
-				
 				<ItemsBooks/>
 			</div>
 
