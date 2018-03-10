@@ -18,6 +18,7 @@ class AppBooks extends Component {
 		fetch(`${BASE_URL}${this.state.query}`, { method: 'GET' })
 			.then(response => response.json())
 			.then(json => {
+				console.log(json);
 				let { items } = json;
 				this.setState({items})
 			})

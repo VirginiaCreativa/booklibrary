@@ -113,6 +113,7 @@ header {
 		border-radius: 10px;
 		position: relative;
 		height: 100%;
+		margin-bottom: 20px;
 		.imgBook {
 			img {
 				height: 257px;
@@ -127,7 +128,7 @@ header {
 		}
 		.link-overlay {
 			position: absolute;
-			height: 388.033px;
+			height: 257px;
 			width: 100%;
 			opacity: 0;
 			top: 0;
@@ -137,38 +138,41 @@ header {
 			transition: 0.3s;
 			align-items: center;
 			justify-content: center;
+			flex-direction: column;
 			margin: auto;
 			background-color: rgba(17, 39, 76, 0.8);
 			p, a {
-				display: inline-block;
-				margin-bottom: 0;
-				height: 40px;
-				width: 60px;
-				padding: 6px;
+				height: 30px;
+				width: 70%;
+				padding: 2px;
 				text-align: center;
 				color: #fff;
-				margin: 0 6px;
+				margin: 0 4px;
 			}
 			p {
 				background-color: #18BAB6;
-				border-radius: 30px 0 0 30px;
+				border-radius: 20px;
 				font-weight: 700;
+				margin-bottom: 6px;
 			}
 			a {
 				background-color: #EE5A24;
-				border-radius: 0 30px 30px 0;
+				border-radius: 20px;
 				&:hover {
 					background-color: #5AB6FF;
 
 				}
 				i {
 					font-size: 20px;
+					position: relative;
+					top: -1px;
 				}
 			}
 		}
 		.single-content {
 			padding: 10px 20px;
 			overflow-wrap: break-word;
+			height: 100px;
 			h3, h5, p {
 				margin-bottom: 0;
 			}
@@ -178,6 +182,7 @@ header {
 			h3 {
 				font-weight: 700;
 				font-size: 16px;
+				margin-bottom: 4px;
 			}
 			h5 {
 				font-weight: 300;
