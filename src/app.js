@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
-import SearchBooks from "./components/searchBooks"
+import AppBooks from "./components/appBooks"
 
-const addSearch = document.querySelector('#formSearch');
+const addSearch = document.querySelector('#appBooks');
 
 render(
-	<SearchBooks/>, addSearch
+	<AppBooks/>, addSearch
 );
