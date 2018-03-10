@@ -25,6 +25,7 @@ class AppBooks extends Component {
 			    console.log('parsing failed', ex)
 			)
 		console.log(this.state.query);
+		this.state.query = '';
 	}
 
 	render() {
