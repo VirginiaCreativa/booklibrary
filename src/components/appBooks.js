@@ -25,8 +25,6 @@ class AppBooks extends Component {
 			.catch(ex => 
 			    console.log('parsing failed', ex)
 			)
-		console.log(this.state.query);
-		this.state.query = '';
 	}
 
 	render() {
@@ -34,11 +32,11 @@ class AppBooks extends Component {
 			<div>
 				<div id='search'>
 					<Form>
-						<Input type="search" placeholder="Search" 
+						<Input type="search" placeholder="Search"
 							onChange={event => this.setState({query: event.target.value})}
-							onKeyDown={ev => {
-								let keycode = (ev.keyCode ? ev.keyCode : ev.which);
-								if (keycode === 13) {
+							onKeyPress={(ev) => {
+								if (ev.key === 13 || ev.key === 'Enter' ) {
+									ev.preventDefault();
 									this.search();
 								}
 							}}
