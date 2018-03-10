@@ -18,7 +18,7 @@ class AppBooks extends Component {
 		fetch(`${BASE_URL}${this.state.query}`, { method: 'GET' })
 			.then(response => response.json())
 			.then(json => {
-				let { itmes } = json;
+				let { items } = json;
 				this.setState({items})
 			})
 			.catch(ex => 
@@ -44,7 +44,7 @@ class AppBooks extends Component {
 						<Button onClick={(ev) => this.search()} className="btnSearch"><i className="ion-ios-search"></i></Button>
 					</Form>
 				</div>
-				<ItemsBooks/>
+				<ItemsBooks items={this.state.items}/>
 			</div>
 
 		)

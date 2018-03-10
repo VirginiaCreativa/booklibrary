@@ -8,7 +8,15 @@ class ItemsBooks extends Component {
 					<div className="col-md-3 col-sm-12">
 						<div id="items_Books">
 							<div className="item">
-								<div className="link-overlay">
+								{
+									this.props.items.map((item, index) => {
+										let {title} = item.volumeInfo
+										return (
+											<h3 key={index}>{title}</h3>
+										)
+									})
+								}
+								{/*<div className="link-overlay">
 									<p className="price">$39</p>
 									<a href=""><i className="ion-link"></i></a>
 								</div>
@@ -18,7 +26,7 @@ class ItemsBooks extends Component {
 										<h3>Title Book</h3>
 									</a>
 									<h5>Autor Book</h5>
-								</div>
+								</div>*/}
 							</div>
 						</div>
 					</div>
